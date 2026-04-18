@@ -22,6 +22,12 @@ botao.addEventListener('click', () => {
   localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');
 });
 
+botao.addEventListener('click', () => {
+  const isclaro = body.classList.toggle('claro');
+  temaEscuro(isclaro);
+  localStorage.setItem('tema', isclaro ? 'claro' : 'escuro');
+});
+
 // Scroll suave para links de navegação
 const navLinks = document.querySelectorAll('#menu ul a.link');
 navLinks.forEach(link => {
